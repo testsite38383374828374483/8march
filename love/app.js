@@ -11,21 +11,21 @@ return maxim;}
 function wipe(node){node.innerHTML='';}
 function get_lock(){return text_lock;}
 
-const writeChat = function(kop){
+var kopp = 0;
+
+const writeChat = function(){
     try{
         document.querySelector('.enter-password').remove();
     }catch{
     }
-    kop = JSON.parse(kop);
     let chtmsg = document.createElement('div');
     chtmsg.classList.add('chat-message-right');
     document.querySelector('.chat').append(chtmsg);
-    let op = setTimeout(() => waits = delay_type(chtmsg,kop[0],0,70), 0);
-    kop.shift();
-    kopp = kop;
+    let op = setTimeout(() => waits = delay_type(chtmsg,kopp[0],0,70), 0);
+    kopp.shift();
     setTimeout(() => setInterval(check_text_lock, 3000), 3000);
 }
-var kopp = 0;
+
 const check_text_lock = function(){
     if (kopp.length > 0){
         if (get_lock() == false){
@@ -38,12 +38,14 @@ const check_text_lock = function(){
     }
 }
 
-document.querySelector('.btn').onclick = function(){
-    let input = document.querySelector('.password').value;
-    try{
-        let kop = JSON.parse(String(CryptoJS.AES.decrypt(String(aes), input).toString(CryptoJS.enc.Utf8)));
-        writeChat(kop);
-    }catch{
-        alert('Пароль не верный!');
+window.onload = function(){
+    document.body.querySelector('.btn').onclick = function(){
+        let input = document.querySelector('.password').value;
+        try{
+            let kop = JSON.parse(String(CryptoJS.AES.decrypt(String(aes), input).toString(CryptoJS.enc.Utf8)));
+            writeChat();
+        }catch{
+            alert('Пароль не верный!');
+        }
     }
 }
