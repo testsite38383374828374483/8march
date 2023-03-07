@@ -97,4 +97,6 @@ msg_array = [
 ]
 
 numberr = msg_array[Math.floor(Math.random()*msg_array.length)];
-wipe(document.querySelector('.label')); let ldlay=delay_type(document.querySelector('.label'),msg_array[numberr],0,70);
+window.onload = function(){
+    wipe(document.querySelector('.label')); delay_type(document.querySelector('.label'),numberr,0,70);
+}
