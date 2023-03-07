@@ -21,7 +21,8 @@ const writeChat = function(){
     let chtmsg = document.createElement('div');
     chtmsg.classList.add('chat-message-right');
     document.querySelector('.chat').append(chtmsg);
-    let op = setTimeout(() => waits = delay_type(chtmsg,kopp[0],0,70), 0);
+    let text = kopp[0];
+    let op = setTimeout(() => waits = delay_type(chtmsg,text,0,70), 0);
     kopp.shift();
     setTimeout(() => setInterval(check_text_lock, 3000), 3000);
 }
