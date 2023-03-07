@@ -23,5 +23,14 @@ body {
     padding: 10px 20px;
     margin: 20px;
     width: 100%;
-    background-color: #fff;
+    background-color: #ffffffdb;
+    backdrop-filter: blur(5px);
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        background: url('../images/mobile.png');
+        background-size: contain;
+    }
+    
 }
