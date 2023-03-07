@@ -55,3 +55,21 @@ input.password:focus {
     border: 1px solid #0082f4;
     transition: .2s;
 }
+
+.chat {
+    max-width: 500px;
+    background: #fff;
+    height: 90vh;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+.chat-message-right {background: #0082f4;margin-top: 10px;margin-left: 30px;padding: 10px 20px;color: #fff;border-radius: 5px 5px 0px 5px;}
+
+
+@media screen and (max-width: 600px) {
+    .chat{
+        width: 100%;
+        height: 100vh;
+    }
+}
