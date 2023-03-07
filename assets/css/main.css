@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 body {
     margin: 0px;
     background-color: #F8F8F8;
@@ -8,13 +10,16 @@ body {
     align-items: center;
     background: url('../images/pc.png');
     background-size: cover;
+    font-family: 'Noto Serif Display', serif;
+    font-weight: 300;
+    font-size: 30px;
 }
 
 
 
 .label {
     display: flex;
-    max-width: 400px;
+    max-width: 550px;
     padding: 10px 20px;
     margin: 20px;
     width: 100%;
