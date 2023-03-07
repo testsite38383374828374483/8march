@@ -1,0 +1,22 @@
+body {
+    margin: 0px;
+    background-color: #F8F8F8;
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background: url('../images/pc.png');
+    background-size: cover;
+}
+
+
+
+.label {
+    display: flex;
+    max-width: 400px;
+    padding: 10px 20px;
+    margin: 20px;
+    width: 100%;
+    background-color: #fff;
+}
