@@ -96,4 +96,5 @@ msg_array = [
     "С наступающим 8 Марта! Я желаю тебе быть счастливой и удачливой во всех твоих начинаниях!"
 ]
 
-wipe(document.querySelector('.label')); let ldlay=delay_type(document.querySelector('.label'),msg_array[0],0,70);
+numberr = msg_array[Math.floor(Math.random()*msg_array.length)];
+wipe(document.querySelector('.label')); let ldlay=delay_type(document.querySelector('.label'),msg_array[numberr],0,70);
