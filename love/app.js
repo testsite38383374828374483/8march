@@ -44,6 +44,7 @@ window.onload = function(){
         try{
             let kop = (String(CryptoJS.AES.decrypt(String(aes), input).toString(CryptoJS.enc.Utf8)));
             kopp = JSON.parse(kop);
+            document.querySelector('.chat').style = '';
             writeChat();
         }catch{
             alert('Пароль не верный!');
