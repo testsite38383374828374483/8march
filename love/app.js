@@ -42,7 +42,8 @@ window.onload = function(){
     document.body.querySelector('.btn').onclick = function(){
         let input = document.querySelector('.password').value;
         try{
-            let kop = JSON.parse(String(CryptoJS.AES.decrypt(String(aes), input).toString(CryptoJS.enc.Utf8)));
+            let kop = (String(CryptoJS.AES.decrypt(String(aes), input).toString(CryptoJS.enc.Utf8)));
+            kopp = JSON.parse(kop);
             writeChat();
         }catch{
             alert('Пароль не верный!');
