@@ -27,11 +27,21 @@ body {
     backdrop-filter: blur(5px);
 }
 
+.creator {
+    position: fixed;
+    bottom: 0px;
+    font-size: 15px;
+    font-weight: bold;
+    background: #fff;
+    width: 100%;
+    text-align: center;
+    padding: 10px 20px;
+}
+
 @media screen and (max-width: 600px) {
     body {
         background: url('../images/mobile.png');
         background-size: 100vh;
         background-position-y: 100%;
     }
-    
 }
